@@ -18,12 +18,12 @@ public class Calculator implements Receiver, CalculatorInt, PreStart, PostStop {
 
 	// Non blocking request response
 	public Future<Integer> add(Integer first, Integer second) {
-		return Futures.successful(first + second, TypedActor.dispatcher());
+		return Futures.successful(first + second);
 	}
 
 	// Non blocking request response
 	public Future<Integer> subtract(Integer first, Integer second) {
-		return Futures.successful(first - second, TypedActor.dispatcher());
+		return Futures.successful(first - second);
 
 	}
 

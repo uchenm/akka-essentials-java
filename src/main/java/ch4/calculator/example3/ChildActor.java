@@ -19,7 +19,7 @@ public class ChildActor extends UntypedActor {
 			throw new IllegalArgumentException("boom!");
 		} else if (message instanceof Integer) {
 			Integer value = (Integer) message;
-			getSender().tell(value * value);
+			getSender().tell(value * value,self());
 		} else
 			unhandled(message);
 
